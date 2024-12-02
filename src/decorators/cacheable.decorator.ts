@@ -1,6 +1,7 @@
 import { CacheableHelper } from '../helper/cacheable.helper';
 import { CacheableOptions } from '../interfaces';
 
+// use the decorator in @example  https://github.com/microsoft/TypeScript/issues/47679#issuecomment-1763863693
 /**
  * `Cacheable` decorator applies caching functionality to a method, allowing the method's return value to be cached and reducing repeated computation.
  *
@@ -19,7 +20,7 @@ import { CacheableOptions } from '../interfaces';
  *
  * @example
  * class ExampleService {
- *   @Cacheable<(id: number) => Promise<User>>({
+ *   ⁣@Cacheable<(id: number) => Promise<User>>({
  *     name: 'users',
  *     ttl: 60,
  *     key: ({ args }) => args[0],

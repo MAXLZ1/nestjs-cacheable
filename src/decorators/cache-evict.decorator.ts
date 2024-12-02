@@ -23,7 +23,7 @@ import { Cacheable } from 'cacheable';
  * @example
  * class ExampleService {
  *   // Evict a specific cache key after the method is executed.
- *   @CacheEvict<(id: number) => Promise<void>>({
+ *   ⁣@CacheEvict<(id: number) => Promise<void>>({
  *     name: 'users',
  *     key: ({ args }) => args[0],
  *   })
