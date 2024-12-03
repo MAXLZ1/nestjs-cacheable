@@ -3,7 +3,7 @@ import { Test } from '@nestjs/testing';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { RegisterGlobalModule } from '../src/register/register-global/register-global.module';
+import { RegisterGlobalModule } from './modules/register/register-global/register-global.module';
 
 describe('Register Global', () => {
   let server: Server;

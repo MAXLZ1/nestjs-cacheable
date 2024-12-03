@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, it } from 'vitest';
 import { Test } from '@nestjs/testing';
-import { AsyncRegisterWithFactoryModule } from '../src/register/async-register-with-factory/async-register-with-factory.module';
+import { AsyncRegisterWithFactoryModule } from './modules/register/async-register-with-factory/async-register-with-factory.module';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';

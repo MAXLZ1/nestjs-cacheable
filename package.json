@@ -1,10 +1,14 @@
 {
   "name": "nestjs-cacheable",
   "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "husky",
-    "tsc": "rimraf ./dist && tsc",
-    "test:e2e:watch": "vitest --config ./vitest.config.e2e.mts"
+    "build": "rimraf ./dist && tsc",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:e2e": "vitest --config test/e2e/vitest.config.e2e.mts"
   },
   "author": "MAXLZ",
   "license": "MIT",
@@ -24,11 +28,11 @@
     "@nestjs/testing": "^10.4.12",
     "@swc/core": "^1.9.3",
     "@types/supertest": "^6.0.2",
+    "@vitest/coverage-v8": "2.2.0-beta.2",
     "cacheable": "^1.8.5",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.12.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.1",
@@ -36,9 +40,9 @@
     "rimraf": "^6.0.1",
     "supertest": "^7.0.0",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0",
+    "typescript-eslint": "^8.17.0",
     "unplugin-swc": "^1.5.1",
-    "vitest": "^2.1.6"
+    "vitest": "2.2.0-beta.2"
   },
   "lint-staged": {
     "*.ts": [

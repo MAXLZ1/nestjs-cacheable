@@ -3,7 +3,7 @@ import { Test } from '@nestjs/testing';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { AsyncRegisterGlobalModule } from '../src/register/async-register-global/async-register-global.module';
+import { AsyncRegisterGlobalModule } from './modules/register/async-register-global/async-register-global.module';
 
 describe('Async Register Global', () => {
   let server: Server;

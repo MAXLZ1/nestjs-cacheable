@@ -3,7 +3,7 @@ import { Test } from '@nestjs/testing';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { AsyncRegisterWithClassModule } from '../src/register/async-register-with-class/async-register-with-class.module';
+import { AsyncRegisterWithClassModule } from './modules/register/async-register-with-class/async-register-with-class.module';
 
 describe('Async Register With Class', () => {
   let server: Server;

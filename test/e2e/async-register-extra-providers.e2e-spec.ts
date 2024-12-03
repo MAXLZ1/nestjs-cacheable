@@ -3,7 +3,7 @@ import { Test } from '@nestjs/testing';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { AsyncRegisterExtraProvidersModule } from '../src/register/async-register-extra-providers/async-register-extra-providers.module';
+import { AsyncRegisterExtraProvidersModule } from './modules/register/async-register-extra-providers/async-register-extra-providers.module';
 
 describe('Async Register Extra Providers', () => {
   let server: Server;

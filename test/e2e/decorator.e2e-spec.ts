@@ -3,9 +3,9 @@ import { Test } from '@nestjs/testing';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { AppModule } from '../src/decorators/app.module';
+import { AppModule } from './modules/decorators/app.module';
 import { CACHEABLE, Cache } from '../../src';
-import { TestService } from '../src/decorators/test/test.service';
+import { TestService } from './modules/decorators/test/test.service';
 
 describe('Decorator', () => {
   let server: Server;
