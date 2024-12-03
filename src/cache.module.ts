@@ -1,4 +1,4 @@
-import { Module, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
+import { Inject, Module, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
 import {
   ASYNC_OPTIONS_TYPE,
   ConfigurableModuleClass,
@@ -7,7 +7,6 @@ import {
 import { CACHEABLE } from './cache.constants';
 import { createCacheable } from './cache.providers';
 import { Cacheable } from 'cacheable';
-import { ModuleRef } from '@nestjs/core';
 import { CacheableHelper } from './helper/cacheable.helper';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type,@typescript-eslint/no-unsafe-declaration-merging
@@ -30,7 +29,7 @@ export class CacheModule
   extends ConfigurableModuleClass
   implements OnModuleInit, OnModuleDestroy
 {
-  constructor(private moduleRef: ModuleRef) {
+  constructor(@Inject(CACHEABLE) private readonly cacheable: Cache) {
     super();
   }
 
@@ -43,7 +42,7 @@ export class CacheModule
   }
 
   onModuleInit() {
-    CacheableHelper.setCacheable(this.moduleRef.get<Cache>(CACHEABLE));
+    CacheableHelper.setCacheable(this.cacheable);
   }
 
   onModuleDestroy() {
