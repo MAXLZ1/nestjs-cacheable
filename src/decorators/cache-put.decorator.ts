@@ -20,14 +20,14 @@ import { CacheableOptions } from '../interfaces';
  *
  * @example
  * class ExampleService {
- *   ⁣@CachePut<(id: number) => Promise<User>>({
+ *   ⁣@CachePut<typeof ExampleService.prototype.setUser>({
  *     name: 'users',
  *     ttl: 60,
  *     key: ({ args }) => args[0],
  *     condition: ({ result }) => result !== null,
  *   })
- *   async getUser(id: number): Promise<User> {
- *     return await this.userRepository.findOne(id);
+ *   async setUser(id: number): Promise<User> {
+ *     return await this.userRepository.create(id);
  *   }
  * }
  */

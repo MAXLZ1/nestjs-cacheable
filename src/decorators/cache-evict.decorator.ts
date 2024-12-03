@@ -23,7 +23,7 @@ import { Cacheable } from 'cacheable';
  * @example
  * class ExampleService {
  *   // Evict a specific cache key after the method is executed.
- *   ⁣@CacheEvict<(id: number) => Promise<void>>({
+ *   ⁣@CacheEvict<typeof ExampleService.prototype.removeUser>({
  *     name: 'users',
  *     key: ({ args }) => args[0],
  *   })
@@ -32,7 +32,7 @@ import { Cacheable } from 'cacheable';
  *   }
  *
  *   // Evict all cache entries under the 'users' namespace before the method is executed.
- *   @CacheEvict({
+ *   ⁣@CacheEvict({
  *     name: 'users',
  *     allEntries: true,
  *     beforeInvocation: true,
@@ -67,6 +67,8 @@ export function CacheEvict<
       const delKey = async (result?: R) => {
         if (allEntries) {
           const namespace = cacheable.getNameSpace();
+          // namespace generate by
+          // https://github.com/jaredwray/keyv/blob/4e59d1c5cd65b505b9a38dc7b20e6c8a4f7b9264/packages/keyv/src/index.ts#L372
           const helperCacheable = new Cacheable({
             primary: cacheable.primary,
             secondary: cacheable.secondary,

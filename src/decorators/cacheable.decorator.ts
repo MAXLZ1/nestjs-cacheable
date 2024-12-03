@@ -20,7 +20,7 @@ import { CacheableOptions } from '../interfaces';
  *
  * @example
  * class ExampleService {
- *   ⁣@Cacheable<(id: number) => Promise<User>>({
+ *   ⁣@Cacheable<typeof ExampleService.prototype.getUser>({
  *     name: 'users',
  *     ttl: 60,
  *     key: ({ args }) => args[0],
