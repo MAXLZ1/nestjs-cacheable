@@ -1,6 +1,7 @@
 import { CacheEvictOptions } from '../interfaces';
 import { CacheableHelper } from '../helper/cacheable.helper';
 import { Cacheable } from 'cacheable';
+import { clearHelper } from '../helper/clear.helper';
 
 /**
  * `CacheEvict` decorator is used to invalidate (delete) cached entries associated with a method's execution.
@@ -66,17 +67,7 @@ export function CacheEvict<
       const buildKey = (name: string, key: string) => `${name}:${key}`;
       const delKey = async (result?: R) => {
         if (allEntries) {
-          const namespace = cacheable.getNameSpace();
-          // namespace generate by
-          // https://github.com/jaredwray/keyv/blob/4e59d1c5cd65b505b9a38dc7b20e6c8a4f7b9264/packages/keyv/src/index.ts#L372
-          const helperCacheable = new Cacheable({
-            primary: cacheable.primary,
-            secondary: cacheable.secondary,
-            namespace: namespace ? `${namespace}:${name}` : name,
-          });
-
-          await helperCacheable.clear();
-          await helperCacheable.disconnect();
+          await clearAllEntries(cacheable, name);
         } else {
           let cacheKey: string | undefined;
 
@@ -107,4 +98,15 @@ export function CacheEvict<
       return result;
     };
   };
+}
+
+async function clearAllEntries(cacheable: Cacheable, name: string) {
+  const { primary, secondary } = cacheable;
+  const promises = [clearHelper(primary, name)];
+
+  if (secondary) promises.push(clearHelper(secondary, name));
+
+  await (cacheable.nonBlocking
+    ? Promise.race(promises)
+    : Promise.all(promises));
 }
