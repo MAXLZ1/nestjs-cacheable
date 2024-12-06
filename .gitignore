@@ -13,4 +13,8 @@ node_modules/
 
 .idea
 
+# Build files
 dist
+
+# Sqlite files
+*.sqlite
