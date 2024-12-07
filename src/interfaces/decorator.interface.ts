@@ -31,7 +31,7 @@ type CacheEvictOptionsAfter<T, P, R> = {
 export type CacheableOptions<T, P, R> = {
   name: string;
   key?: Key<T, P, R, true>;
-  ttl?: number;
+  ttl?: number | string;
   condition?: Condition<P, R>;
 };
 
