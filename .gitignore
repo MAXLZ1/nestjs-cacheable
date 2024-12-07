@@ -12,6 +12,7 @@ node_modules/
 *.tgz
 
 .idea
+.vscode
 
 # Build files
 dist
