@@ -29,7 +29,7 @@ jobs:
       run: npm install -g pnpm
 
     - name: Start services
-      run: docker compose -f docker-compose.yml
+      run: docker compose -f docker-compose.yml up -d
       
     - name: Install dependencies
       run: pnpm install
