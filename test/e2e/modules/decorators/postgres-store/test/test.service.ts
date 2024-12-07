@@ -7,7 +7,7 @@ const CACHE_NAME = 'value';
 export class TestService {
   checkMethodCall() {}
 
-  @Cacheable<(id: string) => string>({
+  @Cacheable<typeof TestService.prototype.getValue>({
     name: CACHE_NAME,
     key: ({ args }) => args[0],
   })
@@ -16,7 +16,7 @@ export class TestService {
     return id;
   }
 
-  @CachePut<(id: string) => string>({
+  @CachePut<typeof TestService.prototype.setValue>({
     name: CACHE_NAME,
     key: ({ args }) => args[0],
   })
@@ -25,7 +25,7 @@ export class TestService {
     return id;
   }
 
-  @CacheEvict<(id: string) => string>({
+  @CacheEvict<typeof TestService.prototype.delValue>({
     name: CACHE_NAME,
     key: ({ args }) => args[0],
   })
