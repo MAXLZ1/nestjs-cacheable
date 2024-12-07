@@ -18,3 +18,8 @@ dist
 
 # Sqlite files
 *.sqlite
+
+# dotenv environment variable files
+.env
+.env.*.local
+.env.local
