@@ -1,5 +1,6 @@
 # NestJS Cacheable
 
+[![codecov](https://codecov.io/github/MAXLZ1/nestjs-cacheable/graph/badge.svg?token=JWT2NV0ZNM)](https://codecov.io/github/MAXLZ1/nestjs-cacheable)
 [![License](https://img.shields.io/github/license/MAXLZ1/nestjs-cacheable)](LICENSE)
 
 A flexible, powerful caching solution for NestJS applications. Unlike [@nestjs-cache-manager](https://www.npmjs.com/package/@nestjs/cache-manager), it uses [cacheable](https://www.npmjs.com/package/cacheable) as the cache solution.
