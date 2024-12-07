@@ -3,11 +3,11 @@ import { Test } from '@nestjs/testing';
 import { Server } from 'net';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
-import { AppModule } from './modules/decorators/app.module';
+import { AppModule } from './modules/decorators/redis-store/app.module';
 import { CACHEABLE, Cache } from '../../src';
-import { TestService } from './modules/decorators/test/test.service';
+import { TestService } from './modules/decorators/redis-store/test/test.service';
 
-describe('Decorator', () => {
+describe('Decorator For Redis Store', () => {
   let server: Server;
   let app: INestApplication;
   let cacheable: Cache;
@@ -90,9 +90,10 @@ describe('Decorator', () => {
       for (let i = 1; i <= 10; i++) {
         numbers.push(i);
       }
-      await Promise.all(
-        numbers.map((num) => request(server).post(`/value/${num}`)),
-      );
+      await Promise.all([
+        ...numbers.map((num) => request(server).post(`/value/${num}`)),
+        cacheable.set('test', 'this key does not be deleted'),
+      ]);
       for (const num of numbers) {
         await expect(cacheable.get(`value:${num}`)).resolves.toBe(`${num}`);
       }
@@ -102,6 +103,9 @@ describe('Decorator', () => {
       for (const num of numbers) {
         await expect(cacheable.get(`value:${num}`)).resolves.toBeUndefined();
       }
+      await expect(cacheable.get('test')).resolves.toBe(
+        'this key does not be deleted',
+      );
     });
   });
 });

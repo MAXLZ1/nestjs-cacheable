@@ -1,4 +1,4 @@
-import { Cacheable, CacheEvict, CachePut } from '../../../../../src';
+import { Cacheable, CacheEvict, CachePut } from '../../../../../../src';
 import { Injectable } from '@nestjs/common';
 
 const CACHE_NAME = 'value';

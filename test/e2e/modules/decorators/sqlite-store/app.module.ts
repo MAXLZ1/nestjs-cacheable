@@ -1,12 +1,18 @@
 import { Module } from '@nestjs/common';
-import { CacheModule } from '../../../../src';
+import { CacheModule } from '../../../../../src';
 import { AppController } from './app.controller';
 import { TestModule } from './test/test.module';
+import KeyvSqlite from '@keyv/sqlite';
 
 @Module({
   imports: [
     CacheModule.registerAsync({
-      useFactory: () => ({ ttl: '1m', namespace: 'test' }),
+      useFactory: () => {
+        return {
+          primary: new KeyvSqlite({ uri: 'sqlite://test/testdb.sqlite' }),
+          ttl: '10m',
+        };
+      },
     }),
     TestModule,
   ],

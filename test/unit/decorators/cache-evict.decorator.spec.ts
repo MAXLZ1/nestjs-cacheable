@@ -1,12 +1,16 @@
 import { describe, expect, it, vi } from 'vitest';
 import { CacheableHelper } from '../../../src/helper/cacheable.helper';
-import { Cacheable } from 'cacheable';
 import { CacheEvict } from '../../../src';
+import { clearHelper } from '../../../src/helper/clear.helper';
+import { Keyv } from 'keyv';
+import { Cacheable } from 'cacheable';
+import KeyvMemcache from '@keyv/memcache';
 
 vi.mock(
   '../../../src/helper/cacheable.helper',
   () => import('../../__mocks__/cacheable.helper'),
 );
+vi.mock('../../../src/helper/clear.helper');
 
 describe('CacheEvict', () => {
   it('should not delete cache if there is no a cacheable', async () => {
@@ -93,7 +97,7 @@ describe('CacheEvict', () => {
     expect(deleteSpy).toHaveBeenCalledWith('test:value');
   });
 
-  it('should delete all cache', async () => {
+  it('should delete all cache in the primary', async () => {
     class TestService {
       @CacheEvict({ name: 'test', allEntries: true })
       delValue(id: number) {
@@ -101,17 +105,20 @@ describe('CacheEvict', () => {
       }
     }
 
-    const clearSpy = vi.spyOn(Cacheable.prototype, 'clear');
-    const disconnectSpy = vi.spyOn(Cacheable.prototype, 'disconnect');
+    vi.spyOn(CacheableHelper, 'getCacheable').mockReturnValueOnce(
+      new Cacheable({ nonBlocking: true }),
+    );
+    const raceSpy = vi.spyOn(Promise, 'race');
     const testService = new TestService();
     const result = await testService.delValue(1);
 
     expect(result).toBe(1);
-    expect(clearSpy).toHaveBeenCalled();
-    expect(disconnectSpy).toHaveBeenCalled();
+    expect(clearHelper).toHaveBeenNthCalledWith(1, expect.any(Keyv), 'test');
+    expect(clearHelper).not.toHaveBeenNthCalledWith(2);
+    expect(raceSpy).toHaveBeenCalled();
   });
 
-  it('should delete all cache by namespace and name', async () => {
+  it('should delete all cache in the primary and secondary', async () => {
     class TestService {
       @CacheEvict({ name: 'test', allEntries: true })
       delValue(id: number) {
@@ -119,18 +126,17 @@ describe('CacheEvict', () => {
       }
     }
 
-    vi.spyOn(
-      CacheableHelper.getCacheable()!,
-      'getNameSpace',
-    ).mockReturnValueOnce('namespace');
-    const clearSpy = vi.spyOn(Cacheable.prototype, 'clear');
-    const disconnectSpy = vi.spyOn(Cacheable.prototype, 'disconnect');
+    vi.spyOn(CacheableHelper, 'getCacheable').mockReturnValueOnce(
+      new Cacheable({ secondary: new KeyvMemcache(), nonBlocking: false }),
+    );
+    const allSpy = vi.spyOn(Promise, 'all');
     const testService = new TestService();
     const result = await testService.delValue(1);
 
     expect(result).toBe(1);
-    expect(clearSpy).toHaveBeenCalled();
-    expect(disconnectSpy).toHaveBeenCalled();
+    expect(clearHelper).toHaveBeenNthCalledWith(1, expect.any(Keyv), 'test');
+    expect(clearHelper).toHaveBeenNthCalledWith(2, expect.any(Keyv), 'test');
+    expect(allSpy).toHaveBeenCalled();
   });
 
   it('should delete cache by name if the key is missing', async () => {
