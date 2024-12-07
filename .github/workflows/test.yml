@@ -1,0 +1,41 @@
+name: test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    env:
+      HOST: 127.0.0.1
+
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup node ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+    - name: Install pnpm
+      run: npm install -g pnpm
+
+    - name: Start services
+      run: docker compose -f docker-compose.yml
+      
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Unit test
+      run: pnpm run test
+
+    - name: E2e test
+      run: pnpm run test:e2e
