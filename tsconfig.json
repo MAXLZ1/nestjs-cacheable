@@ -12,7 +12,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "outDir": "./dist",
-    "rootDir": ".",
+    "rootDir": "./src",
     "noLib": false
   },
   "include": ["src/**/*"],
