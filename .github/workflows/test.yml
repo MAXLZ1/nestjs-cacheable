@@ -19,23 +19,27 @@ jobs:
         node-version: [20.x, 22.x]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup node ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - name: Install pnpm
-      run: npm install -g pnpm
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Start services
-      run: docker compose -f docker-compose.yml up -d
-      
-    - name: Install dependencies
-      run: pnpm install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
-    - name: Unit test
-      run: pnpm run test
+      - name: Setup node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          cache: "pnpm"
 
-    - name: E2e test
-      run: pnpm run test:e2e
+      - name: Start services
+        run: docker compose -f docker-compose.yml up -d
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Unit test
+        run: pnpm run test
+
+      - name: E2e test
+        run: pnpm run test:e2e
