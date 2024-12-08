@@ -1,5 +1,6 @@
 # NestJS Cacheable
 
+![NPM Version](https://img.shields.io/npm/v/%40maxlz%2Fnestjs-cacheable)
 [![codecov](https://codecov.io/github/MAXLZ1/nestjs-cacheable/graph/badge.svg?token=JWT2NV0ZNM)](https://codecov.io/github/MAXLZ1/nestjs-cacheable)
 [![License](https://img.shields.io/github/license/MAXLZ1/nestjs-cacheable)](LICENSE)
 
@@ -80,8 +81,8 @@ export class AppModule {}
 |-------------------|----------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `isGlobal?`       | `boolean`                        | `false` | Set a global module                                                                                                                                                                                                                                                                                 |
 | `extraProviders?` | `Provider[]`                     | `[]`    | Extra providers. Injected into the class as an additional provider. For details, please refer to [async-register-extra-providers test case](https://github.com/MAXLZ1/nestjs-cacheable/blob/main/test/e2e/modules/register/async-register-extra-providers/async-register-extra-providers.module.ts) |
-| `useFactory?`     | `() => CacheableOptions`         |         |                                                                                                                                                                                                                                                                                                     |
-| `useClass?`       | implements `CacheOptionsFactory` |         |                                                                                                                                                                                                                                                                                                     |
+| `useFactory?`     | `() => CacheableOptions`         | /       |                                                                                                                                                                                                                                                                                                     |
+| `useClass?`       | implements `CacheOptionsFactory` | /       |                                                                                                                                                                                                                                                                                                     |
 
 [CacheableOptions](https://cacheable.org/docs/cacheable/#cacheable-options).
 
