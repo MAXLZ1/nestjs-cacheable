@@ -10,7 +10,6 @@
   "scripts": {
     "prepare": "husky",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json",
-    "publish": "pnpm publish --no-git-checks",
     "changlog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "test": "vitest run",
     "test:watch": "vitest",
