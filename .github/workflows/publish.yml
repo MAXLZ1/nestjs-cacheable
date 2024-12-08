@@ -1,4 +1,4 @@
-name: publish
+name: Publish Package
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  publish:
 
     runs-on: ubuntu-latest
 

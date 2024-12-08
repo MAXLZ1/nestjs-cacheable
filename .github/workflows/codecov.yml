@@ -1,4 +1,4 @@
-name: codecov
+name: Codecov
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
