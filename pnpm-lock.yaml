@@ -7,6 +7,19 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@keyv/etcd':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@keyv/memcache':
+        specifier: ^2.0.1
+        version: 2.0.1
+      keyv:
+        specifier: ^5.2.1
+        version: 5.2.1
+      lru-cache:
+        specifier: ^11.0.2
+        version: 11.0.2
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.6.0
@@ -17,12 +30,6 @@ importers:
       '@eslint/js':
         specifier: ^9.16.0
         version: 9.16.0
-      '@keyv/etcd':
-        specifier: ^2.0.1
-        version: 2.0.1
-      '@keyv/memcache':
-        specifier: ^2.0.1
-        version: 2.0.1
       '@keyv/mongo':
         specifier: ^3.0.1
         version: 3.0.1(socks@2.8.3)
@@ -80,15 +87,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
-      keyv:
-        specifier: ^5.2.1
-        version: 5.2.1
       lint-staged:
         specifier: ^15.2.10
         version: 15.2.10
-      lru-cache:
-        specifier: ^11.0.2
-        version: 11.0.2
       prettier:
         specifier: ^3.4.1
         version: 3.4.1
