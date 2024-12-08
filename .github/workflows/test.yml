@@ -35,6 +35,15 @@ jobs:
       - name: Start services
         run: docker compose -f docker-compose.yml up -d
 
+      - name: Wait for MySQL to be ready
+        run: |
+          echo "Waiting for MySQL to start..."
+          until docker exec -i $(docker ps -q -f ancestor=mysql) mysqladmin ping --silent -h127.0.0.1; do
+            echo "Waiting for MySQL..."
+            sleep 3
+          done
+          echo "MySQL is up and running!"
+
       - name: Install dependencies
         run: pnpm install
 
