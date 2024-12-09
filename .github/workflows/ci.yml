@@ -29,6 +29,7 @@ jobs:
             **.md
             
   test-and-build:
+    name: Test & Build with node ${{ matrix.node_version }}
     needs: changed
     if: needs.changed.outputs.should_skip != 'true'
     timeout-minutes: 10
@@ -39,7 +40,6 @@ jobs:
       matrix:
         node-version: [ 20, 22 ]
 
-    name: "Test&Build: node-${{ matrix.node_version }}"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,7 +60,7 @@ jobs:
       - name: Wait for MySQL to be ready
         run: |
           echo "Waiting for MySQL to start..."
-          until docker exec -i $(docker ps -q -f ancestor=mysql) mysqladmin ping --silent -h127.0.0.1; do
+          until docker exec -i "$(docker ps -q -f ancestor=mysql)" mysqladmin ping --silent -h127.0.0.1; do
             echo "Waiting for MySQL..."
             sleep 3
           done
@@ -121,6 +121,7 @@ jobs:
       - name: Format
         run:  pnpm prettier --write --log-level=warn . && git diff --exit-code
 
+      # From https://github.com/rhysd/actionlint/blob/main/docs/usage.md#use-actionlint-on-github-actions
       - name: Check workflow files
         run: |
           bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
