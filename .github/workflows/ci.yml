@@ -1,0 +1,128 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  changed:
+    name: Get changed files
+    runs-on: ubuntu-latest
+    outputs:
+      should_skip: ${{ steps.changed-files.outputs.only_changed == 'true' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: |
+            .github/**
+            !.github/workflows/ci.yml
+            **.md
+            
+  test-and-build:
+    needs: changed
+    if: needs.changed.outputs.should_skip != 'true'
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    env:
+      HOST: 127.0.0.1
+    strategy:
+      matrix:
+        node-version: [ 20, 22 ]
+
+    name: "Test&Build: node-${{ matrix.node_version }}"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          cache: "pnpm"
+
+      - name: Start services
+        run: docker compose -f docker-compose.yml up -d
+
+      - name: Wait for MySQL to be ready
+        run: |
+          echo "Waiting for MySQL to start..."
+          until docker exec -i $(docker ps -q -f ancestor=mysql) mysqladmin ping --silent -h127.0.0.1; do
+            echo "Waiting for MySQL..."
+            sleep 3
+          done
+          echo "MySQL is up and running!"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Unit test
+        run: pnpm run test
+
+      - name: E2e test
+        run: pnpm run test:e2e
+
+      - name: build
+        run: pnpm run build
+
+  test-success:
+    if: (!cancelled() && !failure())
+    needs: test-and-build
+    runs-on: ubuntu-latest
+    name: Test & Build Success or Skipped
+    steps:
+      - run: echo "Test & Build Success or Skipped"
+
+  test-fail:
+    if: (!cancelled() && failure())
+    needs: test-and-build
+    runs-on: ubuntu-latest
+    name: Test & Build Failed
+    steps:
+      - run: echo "Test & Build Failed"
+
+  lint:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    name: Lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm run link
+
+      - name: Format
+        run:  pnpm prettier --write --log-level=warn . && git diff --exit-code
+
+      - name: Check workflow files
+        run: |
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          ./actionlint -color
+        shell: bash
