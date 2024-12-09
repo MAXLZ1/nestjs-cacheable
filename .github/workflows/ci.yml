@@ -29,7 +29,6 @@ jobs:
             **.md
             
   test-and-build:
-    name: Test & Build with node ${{ matrix.node_version }}
     needs: changed
     if: needs.changed.outputs.should_skip != 'true'
     timeout-minutes: 10
@@ -39,6 +38,7 @@ jobs:
     strategy:
       matrix:
         node-version: [ 20, 22 ]
+    name: Test & Build with node ${{ matrix.node-version }}
 
     steps:
       - name: Checkout
