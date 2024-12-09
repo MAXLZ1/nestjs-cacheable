@@ -45,7 +45,8 @@ export class CacheModule
     CacheableHelper.setCacheable(this.cacheable);
   }
 
-  onModuleDestroy() {
+  async onModuleDestroy() {
     CacheableHelper.clearCacheable();
+    await this.cacheable.disconnect();
   }
 }

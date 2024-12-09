@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { Test } from '@nestjs/testing';
 import { CACHEABLE, CacheModule } from '../../src';
 import { CacheableHelper } from '../../src/helper/cacheable.helper';
+import { Cacheable } from 'cacheable';
 
 vi.mock(
   '../../../src/helper/cacheable.helper',
@@ -40,8 +41,11 @@ describe('CacheModule', () => {
     const module = await Test.createTestingModule({
       imports: [CacheModule.register()],
     }).compile();
+    const cacheable = module.get<Cacheable>(CACHEABLE);
+    const disconnectSpy = vi.spyOn(cacheable, 'disconnect');
     await module.close();
 
     expect(clearCacheableSpy).toHaveBeenCalled();
+    expect(disconnectSpy).toHaveBeenCalled();
   });
 });
