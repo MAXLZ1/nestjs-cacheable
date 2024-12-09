@@ -1,6 +1,7 @@
 # NestJS Cacheable
 
 ![NPM Version](https://img.shields.io/npm/v/%40maxlz%2Fnestjs-cacheable)
+![CI](https://github.com/MAXLZ1/nestjs-cacheable/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/github/MAXLZ1/nestjs-cacheable/graph/badge.svg?token=JWT2NV0ZNM)](https://codecov.io/github/MAXLZ1/nestjs-cacheable)
 [![License](https://img.shields.io/github/license/MAXLZ1/nestjs-cacheable)](LICENSE)
 
