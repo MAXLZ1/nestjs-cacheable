@@ -1,0 +1,29 @@
+# IntelliJ project files
+.idea
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variable files
+.env
+.env.*.local
+.env.local
+
+# pnpm lock file
+pnpm-lock.yaml
+
+# github
+.github
+
+# build file
+dist
+
+# misc
+*.md
+.prettierrc
+LICENSE
+docker-compose.yml

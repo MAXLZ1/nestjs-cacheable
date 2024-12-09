@@ -24,3 +24,5 @@ dist
 .env
 .env.*.local
 .env.local
+
+.eslintcache
