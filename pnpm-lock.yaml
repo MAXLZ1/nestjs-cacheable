@@ -40,8 +40,8 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4
       '@keyv/redis':
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^4.1.0
+        version: 4.1.0
       '@keyv/sqlite':
         specifier: ^4.0.1
         version: 4.0.1
@@ -486,8 +486,8 @@ packages:
     resolution: {integrity: sha512-D7SU+9/oif9+0ZYEbENDVMAm4kImzvbim/waHLrsq3asykldomE3Q0bkziXjmSBzUVMfSpY0pwaR482BjTcsWg==}
     engines: {node: '>= 18'}
 
-  '@keyv/redis@4.0.2':
-    resolution: {integrity: sha512-fZl1/soyHPPJ7K5QXSccG7b33dPcHDvdsdTGCRhDMolND9XsRa+E9Obm40nrO95M+8HUxinx2D7GzNeMbt3lUA==}
+  '@keyv/redis@4.1.0':
+    resolution: {integrity: sha512-wZqQBYHKrL+Hu4zGduZFwiuj0rLhm3Hw9SLo5GBblGunX3tYmzMziE5za94xRKSnV/uZr7fsHLBfHZUJ4lyCPw==}
     engines: {node: '>= 18'}
 
   '@keyv/serialize@1.0.1':
@@ -3527,8 +3527,9 @@ snapshots:
     transitivePeerDependencies:
       - pg-native
 
-  '@keyv/redis@4.0.2':
+  '@keyv/redis@4.1.0':
     dependencies:
+      cluster-key-slot: 1.1.2
       keyv: 5.2.2
       redis: 4.7.0
 
