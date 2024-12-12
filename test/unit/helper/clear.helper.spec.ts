@@ -1,16 +1,36 @@
 import { describe, expect, it, vi } from 'vitest';
 import { clearHelper } from '../../../src/helper/clear.helper';
 import { Keyv } from 'keyv';
+import KeyvEtcd from '@keyv/etcd';
 import { KeyvCacheableMemory, CacheableMemory } from 'cacheable';
 import { LRUCache } from 'lru-cache';
 import KeyvMemcache from '@keyv/memcache';
 
 vi.mock('keyv', () => import('../../__mocks__/keyv'));
+vi.mock('@keyv/etcd', () => import('../../__mocks__/@keyv/etcd'));
 vi.mock('cacheable', () => import('../../__mocks__/cacheable'));
 vi.mock('lru-cache', () => import('../../__mocks__/lru-cache'));
 vi.mock('@keyv/memcache', () => import('../../__mocks__/@keyv/memcache'));
 
 describe('clearHelper', () => {
+  it('should delete keys by iterator', async () => {
+    vi.spyOn(Keyv.prototype, 'generateIterator').mockImplementationOnce(
+      () =>
+        async function* () {
+          yield ['name:1'];
+          yield ['name:2'];
+        },
+    );
+    const keyv = new Keyv({
+      store: new KeyvEtcd('etcd://localhost'),
+      namespace: 'namespace',
+    });
+    const mockDelete = vi.spyOn(Keyv.prototype, 'delete');
+    await clearHelper(keyv, 'name');
+
+    expect(mockDelete).toHaveBeenCalledWith(['name:1', 'name:2']);
+  });
+
   it('should delete keys from KeyvCacheableMemory store', async () => {
     const keyv = new Keyv({
       store: new KeyvCacheableMemory(),
