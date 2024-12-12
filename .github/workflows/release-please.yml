@@ -1,22 +1,31 @@
-name: Publish Package
+name: Release And Publish
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
 
 jobs:
-  publish:
-
+  release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release: ${{ steps.release.outputs.release_created }}
 
-    permissions:
-      contents: read
-      id-token: write
+    steps:
+      - name: Release Please
+        id: release
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.RELEASE_AND_PUBLISH_TOKEN }}
+          release-type: node
 
+  publish:
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release }}
     strategy:
       matrix:
         node-version: [ 20.x ]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
