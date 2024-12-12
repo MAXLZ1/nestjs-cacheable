@@ -15,8 +15,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       keyv:
-        specifier: ^5.2.1
-        version: 5.2.1
+        specifier: ^5.2.2
+        version: 5.2.2
       lru-cache:
         specifier: ^11.0.2
         version: 11.0.2
@@ -2009,8 +2009,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  keyv@5.2.1:
-    resolution: {integrity: sha512-tpIgCaY02VCW2Pz0zAn4guyct+IeH6Mb5wZdOvpe4oqXeQOJO0C3Wo8fTnf7P3ZD83Vr9kghbkNmzG3lTOhy/A==}
+  keyv@5.2.2:
+    resolution: {integrity: sha512-CRPP4Sq5ofbUE8s4FOirFmDgHeKZFRrH/8+WOUNvLJiMIplRMfnMjxmbaDb+zVd7ex0gGAWqMhZHfcL2u6PrNQ==}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -3522,14 +3522,14 @@ snapshots:
 
   '@keyv/postgres@2.0.4':
     dependencies:
-      keyv: 5.2.1
+      keyv: 5.2.2
       pg: 8.13.1
     transitivePeerDependencies:
       - pg-native
 
   '@keyv/redis@4.0.2':
     dependencies:
-      keyv: 5.2.1
+      keyv: 5.2.2
       redis: 4.7.0
 
   '@keyv/serialize@1.0.1':
@@ -4162,7 +4162,7 @@ snapshots:
   cacheable@1.8.6:
     dependencies:
       hookified: 1.5.1
-      keyv: 5.2.1
+      keyv: 5.2.2
 
   call-bind@1.0.7:
     dependencies:
@@ -5117,7 +5117,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  keyv@5.2.1:
+  keyv@5.2.2:
     dependencies:
       '@keyv/serialize': 1.0.1
 
