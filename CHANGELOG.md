@@ -1,14 +1,13 @@
-# [0.2.0](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.1.2...v0.2.0) (2024-12-09)
+# Changelog
+
+## [0.2.0](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.1.2...v0.2.0) (2024-12-09)
 
 
 ### Features
 
 * disconnect cacheable when module is destroyed ([db2ce03](https://github.com/MAXLZ1/nestjs-cacheable/commit/db2ce03ddbc22cdf499b12aea62b2b84970bc1a1))
 
-
-
 ## [0.1.2](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.1.1...v0.1.2) (2024-12-08)
-
 
 
 ## 0.1.1 (2024-12-08)
