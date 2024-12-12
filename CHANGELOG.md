@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.0...v0.2.1) (2024-12-12)
+
+
+### Miscellaneous Chores
+
+* release 0.2.1 ([728c499](https://github.com/MAXLZ1/nestjs-cacheable/commit/728c499052b6f0c786c52c518708854fbefe3416))
+
 ## [0.2.0](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.1.2...v0.2.0) (2024-12-09)
 
 
@@ -19,6 +26,3 @@
 * allow Cacheable and CachePut decorators to use string type ttl ([891ce95](https://github.com/MAXLZ1/nestjs-cacheable/commit/891ce95fa3294d4290223fe408af7cdf1f95fbdb))
 * improve the deletion logic of allEntries ([2e504bc](https://github.com/MAXLZ1/nestjs-cacheable/commit/2e504bce274320b9d3a4f239812d01ab58ca427d))
 * improve the deletion logic of allEntries ([fa01017](https://github.com/MAXLZ1/nestjs-cacheable/commit/fa01017db2fe189f4f6574e89744e48784e2d16e))
-
-
-
