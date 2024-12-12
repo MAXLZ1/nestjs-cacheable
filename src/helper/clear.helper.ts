@@ -1,19 +1,12 @@
 import { Keyv } from 'keyv';
 import { KeyvCacheableMemory } from 'cacheable';
 import { LRUCache } from 'lru-cache';
-import KeyvEtcd from '@keyv/etcd';
 import KeyvMemcache from '@keyv/memcache';
 
 export async function clearHelper(keyv: Keyv, name: string) {
   const { store, namespace } = keyv;
   const keyPrefix = keyv._getKeyPrefix(name);
   const delKeys = [];
-
-  // TODO should pull request to keyv
-  // https://github.com/jaredwray/keyv/pull/1228
-  if (store instanceof KeyvEtcd) {
-    keyv.iterator = keyv.generateIterator(store.iterator.bind(store));
-  }
 
   if (keyv.iterator) {
     for await (const [key] of keyv.iterator(namespace)) {
