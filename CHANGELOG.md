@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.1](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.1...v0.2.1) (2024-12-12)
+
+
+### Features
+
+* add cache module ([81b4ccd](https://github.com/MAXLZ1/nestjs-cacheable/commit/81b4ccd4f9459ba6ef6f3934c50babf14b5ab38c))
+* allow Cacheable and CachePut decorators to use string type ttl ([891ce95](https://github.com/MAXLZ1/nestjs-cacheable/commit/891ce95fa3294d4290223fe408af7cdf1f95fbdb))
+* disconnect cacheable when module is destroyed ([db2ce03](https://github.com/MAXLZ1/nestjs-cacheable/commit/db2ce03ddbc22cdf499b12aea62b2b84970bc1a1))
+* improve the deletion logic of allEntries ([2e504bc](https://github.com/MAXLZ1/nestjs-cacheable/commit/2e504bce274320b9d3a4f239812d01ab58ca427d))
+* improve the deletion logic of allEntries ([fa01017](https://github.com/MAXLZ1/nestjs-cacheable/commit/fa01017db2fe189f4f6574e89744e48784e2d16e))
+
+
+### Miscellaneous Chores
+
+* release 0.2.1 ([ceee8b0](https://github.com/MAXLZ1/nestjs-cacheable/commit/ceee8b0ad5ff717c7be822a9b3c6ebd4d6f9ee40))
+* release 0.2.1 ([728c499](https://github.com/MAXLZ1/nestjs-cacheable/commit/728c499052b6f0c786c52c518708854fbefe3416))
+
 ## [0.2.1](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.0...v0.2.1) (2024-12-12)
 
 
