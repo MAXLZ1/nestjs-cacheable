@@ -58,7 +58,7 @@
     "@keyv/mongo": "^3.0.1",
     "@keyv/mysql": "^2.0.4",
     "@keyv/postgres": "^2.0.4",
-    "@keyv/redis": "^4.1.0",
+    "@keyv/redis": "^4.2.0",
     "@keyv/sqlite": "^4.0.1",
     "@keyv/valkey": "^1.0.1",
     "@nestjs/common": "^10.4.15",
