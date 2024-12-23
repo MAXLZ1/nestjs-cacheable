@@ -12,8 +12,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       keyv:
-        specifier: ^5.2.2
-        version: 5.2.2
+        specifier: ^5.2.3
+        version: 5.2.3
       lru-cache:
         specifier: ^11.0.2
         version: 11.0.2
@@ -473,6 +473,9 @@ packages:
 
   '@keyv/serialize@1.0.1':
     resolution: {integrity: sha512-kKXeynfORDGPUEEl2PvTExM2zs+IldC6ZD8jPcfvI351MDNtfMlw9V9s4XZXuJNDK2qR5gbEKxRyoYx3quHUVQ==}
+
+  '@keyv/serialize@1.0.2':
+    resolution: {integrity: sha512-+E/LyaAeuABniD/RvUezWVXKpeuvwLEA9//nE9952zBaOdBd2mQ3pPoM8cUe2X6IcMByfuSLzmYqnYshG60+HQ==}
 
   '@keyv/sqlite@4.0.1':
     resolution: {integrity: sha512-Ngs9jhElXN7efS9WvvCC/p6rXMbihna8eNLVBc421Zf+VcFd+pR4DOcS6yA9V22EKtAy4DEj7LtvEEIm0bb80A==}
@@ -1883,8 +1886,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  keyv@5.2.2:
-    resolution: {integrity: sha512-CRPP4Sq5ofbUE8s4FOirFmDgHeKZFRrH/8+WOUNvLJiMIplRMfnMjxmbaDb+zVd7ex0gGAWqMhZHfcL2u6PrNQ==}
+  keyv@5.2.3:
+    resolution: {integrity: sha512-AGKecUfzrowabUv0bH1RIR5Vf7w+l4S3xtQAypKaUpTdIR1EbrAcTxHCrpo9Q+IWeUlFE2palRtgIQcgm+PQJw==}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -3324,7 +3327,7 @@ snapshots:
 
   '@keyv/postgres@2.0.4':
     dependencies:
-      keyv: 5.2.2
+      keyv: 5.2.3
       pg: 8.13.1
     transitivePeerDependencies:
       - pg-native
@@ -3332,10 +3335,14 @@ snapshots:
   '@keyv/redis@4.1.0':
     dependencies:
       cluster-key-slot: 1.1.2
-      keyv: 5.2.2
+      keyv: 5.2.3
       redis: 4.7.0
 
   '@keyv/serialize@1.0.1':
+    dependencies:
+      buffer: 6.0.3
+
+  '@keyv/serialize@1.0.2':
     dependencies:
       buffer: 6.0.3
 
@@ -3959,7 +3966,7 @@ snapshots:
   cacheable@1.8.6:
     dependencies:
       hookified: 1.5.1
-      keyv: 5.2.2
+      keyv: 5.2.3
 
   call-bind@1.0.7:
     dependencies:
@@ -4798,9 +4805,9 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  keyv@5.2.2:
+  keyv@5.2.3:
     dependencies:
-      '@keyv/serialize': 1.0.1
+      '@keyv/serialize': 1.0.2
 
   levn@0.4.1:
     dependencies:
