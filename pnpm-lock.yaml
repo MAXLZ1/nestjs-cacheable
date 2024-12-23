@@ -34,8 +34,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(socks@2.8.3)
       '@keyv/mysql':
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.0.4
+        version: 2.0.4
       '@keyv/postgres':
         specifier: ^2.0.4
         version: 2.0.4
@@ -459,8 +459,8 @@ packages:
   '@keyv/mongo@3.0.1':
     resolution: {integrity: sha512-dNVIhm68mh/CAySN6q7o1vyBRdBRt41nrJXIDlqLhnXOo4l8IAY1Vj5BlTkUfw1BDLuZ9zjb+g1lr/BMRdzNdg==}
 
-  '@keyv/mysql@2.0.3':
-    resolution: {integrity: sha512-Qsplmynhzq1dA+uqNiROfVoHJb/ZkPCkKIe9l8IIl/1KuTMh7pZbIjd2O5uPWZpeNzC5xpBEBvZ8Hp0xXce0pQ==}
+  '@keyv/mysql@2.0.4':
+    resolution: {integrity: sha512-oFP7Y3Ji21fm29XdbhjkFNfDhJT8gItHLsM5cfcmFi0s3zSxbknV0bKknsiWgnYoUYcSiQr9XeBsFZS0s/wLUQ==}
     engines: {node: '>= 18'}
 
   '@keyv/postgres@2.0.4':
@@ -3318,7 +3318,7 @@ snapshots:
       - snappy
       - socks
 
-  '@keyv/mysql@2.0.3':
+  '@keyv/mysql@2.0.4':
     dependencies:
       mysql2: 3.11.5
 
