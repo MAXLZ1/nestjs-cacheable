@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.1...v0.2.2) (2025-01-27)
+
+
+### Miscellaneous Chores
+
+* release 0.2.2 ([faef88b](https://github.com/MAXLZ1/nestjs-cacheable/commit/faef88b6271e247086d1e095a19f076c1a0f8c24))
+
 ## [0.2.1](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.0...v0.2.1) (2024-12-12)
 
 
