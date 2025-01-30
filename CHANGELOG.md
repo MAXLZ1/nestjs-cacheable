@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.2...v0.2.3) (2025-01-30)
+
+
+### Bug Fixes
+
+* **deps:** add support for nestjs v11 ([e33c8c9](https://github.com/MAXLZ1/nestjs-cacheable/commit/e33c8c9575db1b09f01b264adbd911b3e6a41e4c))
+
 ## [0.2.2](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.1...v0.2.2) (2025-01-27)
 
 
