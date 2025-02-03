@@ -37,8 +37,8 @@ importers:
         specifier: ^2.0.5
         version: 2.0.5
       '@keyv/postgres':
-        specifier: ^2.0.4
-        version: 2.0.4
+        specifier: ^2.1.0
+        version: 2.1.0
       '@keyv/redis':
         specifier: ^4.2.0
         version: 4.2.0
@@ -463,8 +463,8 @@ packages:
     resolution: {integrity: sha512-9E4yOii5F631UwCRKo62u6zYkmn48KFB8W+VgiWimM4mrxZeoCSEd9GG2IPr1jAi4oMrRuChXHQ7tomLzedhAA==}
     engines: {node: '>= 18'}
 
-  '@keyv/postgres@2.0.4':
-    resolution: {integrity: sha512-D7SU+9/oif9+0ZYEbENDVMAm4kImzvbim/waHLrsq3asykldomE3Q0bkziXjmSBzUVMfSpY0pwaR482BjTcsWg==}
+  '@keyv/postgres@2.1.0':
+    resolution: {integrity: sha512-hg1dP/rl/zhwxhv+naDCR+T3RS+yfZdxIdmR53FKKQJZLwTfMyOQrdWEvvR1jS3bnsKxyGcTWypAmgCeIB4ndA==}
     engines: {node: '>= 18'}
 
   '@keyv/redis@4.2.0':
@@ -3428,7 +3428,7 @@ snapshots:
     dependencies:
       mysql2: 3.12.0
 
-  '@keyv/postgres@2.0.4':
+  '@keyv/postgres@2.1.0':
     dependencies:
       keyv: 5.2.3
       pg: 8.13.1
