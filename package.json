@@ -53,7 +53,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
-    "@eslint/js": "^9.19.0",
+    "@eslint/js": "^9.20.0",
     "@keyv/etcd": "^2.1.0",
     "@keyv/mongo": "^3.0.1",
     "@keyv/mysql": "^2.0.5",
