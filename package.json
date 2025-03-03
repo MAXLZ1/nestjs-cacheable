@@ -56,7 +56,7 @@
     "@eslint/js": "^9.21.0",
     "@keyv/etcd": "^2.1.0",
     "@keyv/mongo": "^3.0.1",
-    "@keyv/mysql": "^2.0.5",
+    "@keyv/mysql": "^2.1.0",
     "@keyv/postgres": "^2.1.0",
     "@keyv/redis": "^4.2.0",
     "@keyv/sqlite": "^4.0.1",
