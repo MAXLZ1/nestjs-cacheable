@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.6](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.5...v0.2.6) (2025-03-03)
+
+
+### Bug Fixes
+
+* upgrade vitest to 3.0.7 ([b1b1768](https://github.com/MAXLZ1/nestjs-cacheable/commit/b1b1768dadf8d4e88ffb7912f9bb65032b492985))
+
 ## [0.2.5](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.4...v0.2.5) (2025-03-03)
 
 
