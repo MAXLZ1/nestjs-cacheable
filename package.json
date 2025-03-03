@@ -62,7 +62,7 @@
     "@keyv/sqlite": "^4.0.1",
     "@keyv/valkey": "^1.0.2",
     "@nestjs/common": "^11.0.8",
-    "@nestjs/core": "^11.0.8",
+    "@nestjs/core": "^11.0.11",
     "@nestjs/platform-express": "^11.0.8",
     "@nestjs/testing": "^11.0.8",
     "@swc/core": "^1.11.5",
