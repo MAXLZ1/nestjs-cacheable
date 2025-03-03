@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.5](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.4...v0.2.5) (2025-03-03)
+
+
+### Bug Fixes
+
+* bump @eslint/js from 9.20.0 to 9.21.0 ([c638cb7](https://github.com/MAXLZ1/nestjs-cacheable/commit/c638cb7ad75120a54b863def287d44b414a16b05))
+* bump @keyv/mysql from 2.0.5 to 2.1.0 ([985d1f2](https://github.com/MAXLZ1/nestjs-cacheable/commit/985d1f21ccd7d32e20a0221acdbe4a7ecb6d539f))
+* bump @nestjs/common from 11.0.8 to 11.0.11 ([99ddd0d](https://github.com/MAXLZ1/nestjs-cacheable/commit/99ddd0da529268bf151f4acd41d320d1f6f0593e))
+* bump @nestjs/core from 11.0.8 to 11.0.11 ([babda9f](https://github.com/MAXLZ1/nestjs-cacheable/commit/babda9f34e9a1a6e3cf4503c4dd7222e06e08ff8))
+* bump @nestjs/platform-express from 11.0.8 to 11.0.11 ([c1c10c4](https://github.com/MAXLZ1/nestjs-cacheable/commit/c1c10c4aaf247b19eca8c5b25fe6cf2a095c991e))
+* bump @nestjs/testing from 11.0.8 to 11.0.11 ([b1bc661](https://github.com/MAXLZ1/nestjs-cacheable/commit/b1bc6614dc84850d760ceb6b063cdc1c39489e60))
+* bump @swc/core from 1.10.15 to 1.11.5 ([df3220e](https://github.com/MAXLZ1/nestjs-cacheable/commit/df3220efa64ed898b630abb3e549b282300bd990))
+* bump eslint from 9.20.0 to 9.21.0 ([7366c9c](https://github.com/MAXLZ1/nestjs-cacheable/commit/7366c9ce75b5cdeb9d8a2eab22622fe6b3359ab4))
+* bump prettier from 3.5.0 to 3.5.3 ([6df9a88](https://github.com/MAXLZ1/nestjs-cacheable/commit/6df9a882b7274df2699296e533113f36dbf53841))
+* bump typescript-eslint from 8.23.0 to 8.25.0 ([99bb57e](https://github.com/MAXLZ1/nestjs-cacheable/commit/99bb57ef8953dbbd498667b4a1cf723e90cd97e4))
+
 ## [0.2.4](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.3...v0.2.4) (2025-02-10)
 
 
