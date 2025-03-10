@@ -46,8 +46,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       '@keyv/valkey':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.3
+        version: 1.0.3
       '@nestjs/common':
         specifier: ^11.0.11
         version: 11.0.11(reflect-metadata@0.2.2)(rxjs@7.8.1)
@@ -431,8 +431,8 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@ioredis/commands@1.2.0':
-    resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
+  '@iovalkey/commands@0.1.0':
+    resolution: {integrity: sha512-/B9W4qKSSITDii5nkBCHyPkIkAi+ealUtr1oqBJsLxjSRLka4pxun2VvMNSmcwgAMxgXtQfl0qRv7TE+udPJzg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -494,8 +494,8 @@ packages:
     resolution: {integrity: sha512-Ngs9jhElXN7efS9WvvCC/p6rXMbihna8eNLVBc421Zf+VcFd+pR4DOcS6yA9V22EKtAy4DEj7LtvEEIm0bb80A==}
     engines: {node: '>= 18'}
 
-  '@keyv/valkey@1.0.2':
-    resolution: {integrity: sha512-3inmK7mEnbRXL+Qr9cfAUv8HWqpEu07HSGIHvqgeTPQE26n+dkVIIMX7dnkI/lLl2//J1/2bW4doTBL7xe9t1A==}
+  '@keyv/valkey@1.0.3':
+    resolution: {integrity: sha512-QCC6OzI3K1PjAvcj9n5CB+hy8M+hl8PxLkJQWs0DAOP+4XXuJPPRdQqf/jPm7zunrZl5+G+JL8WGsv4Kq0TeoQ==}
     engines: {node: '>= 18'}
 
   '@lukeed/csprng@1.1.0':
@@ -1819,8 +1819,8 @@ packages:
     resolution: {integrity: sha512-QQnnxNyfvmHFIsj7gkPcYymR8Jdw/o7mp5ZFihxn6h8Ci6fh3Dx4E1gPjpQEpIuPo9XVNY/ZUwh4BPMjGyL01g==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  iovalkey@0.2.2:
-    resolution: {integrity: sha512-7eVmLOYV2UamZ/YPXuUwTu/4zBDxXcfjj/wmOwlKBBhU2qjg60Th0Y/cqfED3OxNAhc6hUV2Ft4eQMCKi2EMpQ==}
+  iovalkey@0.3.1:
+    resolution: {integrity: sha512-pSmFj/ZDFLP8AzqIAMpNJArhHYNeyqIwfcUULwZv8g6y3eaUGrlnlT7QXLrJAp0yiGCAqe1hPA33x/h5opNP9w==}
     engines: {node: '>=18.12.0'}
 
   ip-address@9.0.5:
@@ -3397,7 +3397,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@ioredis/commands@1.2.0': {}
+  '@iovalkey/commands@0.1.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -3483,9 +3483,9 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@keyv/valkey@1.0.2':
+  '@keyv/valkey@1.0.3':
     dependencies:
-      iovalkey: 0.2.2
+      iovalkey: 0.3.1
     transitivePeerDependencies:
       - supports-color
 
@@ -4862,9 +4862,9 @@ snapshots:
 
   ini@4.1.1: {}
 
-  iovalkey@0.2.2:
+  iovalkey@0.3.1:
     dependencies:
-      '@ioredis/commands': 1.2.0
+      '@iovalkey/commands': 0.1.0
       cluster-key-slot: 1.1.2
       debug: 4.4.0
       denque: 2.1.0
@@ -5680,7 +5680,7 @@ snapshots:
 
   send@1.1.0:
     dependencies:
-      debug: 4.4.0
+      debug: 4.3.6
       destroy: 1.2.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
