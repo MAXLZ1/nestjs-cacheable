@@ -40,8 +40,8 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       '@keyv/redis':
-        specifier: ^4.2.0
-        version: 4.2.0
+        specifier: ^4.3.1
+        version: 4.3.1
       '@keyv/sqlite':
         specifier: ^4.0.1
         version: 4.0.1
@@ -480,8 +480,8 @@ packages:
     resolution: {integrity: sha512-hg1dP/rl/zhwxhv+naDCR+T3RS+yfZdxIdmR53FKKQJZLwTfMyOQrdWEvvR1jS3bnsKxyGcTWypAmgCeIB4ndA==}
     engines: {node: '>= 18'}
 
-  '@keyv/redis@4.2.0':
-    resolution: {integrity: sha512-QszmBfZZ3wOKJ5z1hn0CTLf04WN/552ITrSDYC3Yg4jT6yVdlz2fJxi5CNrnZ8NIu/Qaj7OAkbSL+pyFUXp6oA==}
+  '@keyv/redis@4.3.1':
+    resolution: {integrity: sha512-+UJU9eFBOFbvfg/Om8ajCPa5NxtctpQuE2ElE5Wf7xwbghmhlbLsJ2K4ZEmPnUF0YUolFBJFHd/ukDIvyTA5kw==}
     engines: {node: '>= 18'}
 
   '@keyv/serialize@1.0.1':
@@ -489,6 +489,9 @@ packages:
 
   '@keyv/serialize@1.0.2':
     resolution: {integrity: sha512-+E/LyaAeuABniD/RvUezWVXKpeuvwLEA9//nE9952zBaOdBd2mQ3pPoM8cUe2X6IcMByfuSLzmYqnYshG60+HQ==}
+
+  '@keyv/serialize@1.0.3':
+    resolution: {integrity: sha512-qnEovoOp5Np2JDGonIDL6Ayihw0RhnRh6vxPuHo4RDn1UOzwEo4AeIfpL6UGIrsceWrCMiVPgwRjbHu4vYFc3g==}
 
   '@keyv/sqlite@4.0.1':
     resolution: {integrity: sha512-Ngs9jhElXN7efS9WvvCC/p6rXMbihna8eNLVBc421Zf+VcFd+pR4DOcS6yA9V22EKtAy4DEj7LtvEEIm0bb80A==}
@@ -1950,6 +1953,9 @@ packages:
 
   keyv@5.2.3:
     resolution: {integrity: sha512-AGKecUfzrowabUv0bH1RIR5Vf7w+l4S3xtQAypKaUpTdIR1EbrAcTxHCrpo9Q+IWeUlFE2palRtgIQcgm+PQJw==}
+
+  keyv@5.3.1:
+    resolution: {integrity: sha512-13hQT2q2VIwOoaJdJa7nY3J8UVbYtMTJFHnwm9LI+SaQRfUiM6Em9KZeOVTCKbMnGcRIL3NSUFpAdjZCq24nLQ==}
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -3462,10 +3468,10 @@ snapshots:
     transitivePeerDependencies:
       - pg-native
 
-  '@keyv/redis@4.2.0':
+  '@keyv/redis@4.3.1':
     dependencies:
       cluster-key-slot: 1.1.2
-      keyv: 5.2.3
+      keyv: 5.3.1
       redis: 4.7.0
 
   '@keyv/serialize@1.0.1':
@@ -3473,6 +3479,10 @@ snapshots:
       buffer: 6.0.3
 
   '@keyv/serialize@1.0.2':
+    dependencies:
+      buffer: 6.0.3
+
+  '@keyv/serialize@1.0.3':
     dependencies:
       buffer: 6.0.3
 
@@ -4984,6 +4994,10 @@ snapshots:
   keyv@5.2.3:
     dependencies:
       '@keyv/serialize': 1.0.2
+
+  keyv@5.3.1:
+    dependencies:
+      '@keyv/serialize': 1.0.3
 
   levn@0.4.1:
     dependencies:
