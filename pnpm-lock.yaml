@@ -70,8 +70,8 @@ importers:
         specifier: ^3.0.7
         version: 3.0.7(vitest@3.0.7(@types/node@22.10.1)(jiti@2.4.2)(yaml@2.7.0))
       cacheable:
-        specifier: ^1.8.8
-        version: 1.8.8
+        specifier: ^1.8.9
+        version: 1.8.9
       dotenv-flow:
         specifier: ^4.1.0
         version: 4.1.0
@@ -1110,8 +1110,8 @@ packages:
     resolution: {integrity: sha512-VVdYzXEn+cnbXpFgWs5hTT7OScegHVmLhJIR8Ufqk3iFD6A6j5iSX1KuBTfNEv4tdJWE2PzA6IVFtcLC7fN9wQ==}
     engines: {node: '>= 10'}
 
-  cacheable@1.8.8:
-    resolution: {integrity: sha512-OE1/jlarWxROUIpd0qGBSKFLkNsotY8pt4GeiVErUYh/NUeTNrT+SBksUgllQv4m6a0W/VZsLuiHb88maavqEw==}
+  cacheable@1.8.9:
+    resolution: {integrity: sha512-FicwAUyWnrtnd4QqYAoRlNs44/a1jTL7XDKqm5gJ90wz1DQPlC7U2Rd1Tydpv+E7WAr4sQHuw8Q8M3nZMAyecQ==}
 
   call-bind-apply-helpers@1.0.2:
     resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
@@ -1755,8 +1755,8 @@ packages:
     resolution: {integrity: sha512-qlspKUK7IlSQv2o+5I7yhUd7TxlOG2Vr5LTa3ve2XSNVKAL/n/u/7KLvKmFNimomDIKvZFXWHv0T12mv7rT8Aw==}
     engines: {node: '>=8'}
 
-  hookified@1.7.0:
-    resolution: {integrity: sha512-XQdMjqC1AyeOzfs+17cnIk7Wdfu1hh2JtcyNfBf5u9jHrT3iZUlGHxLTntFBuk5lwkqJ6l3+daeQdHK5yByHVA==}
+  hookified@1.8.1:
+    resolution: {integrity: sha512-GrO2l93P8xCWBSTBX9l2BxI78VU/MAAYag+pG8curS3aBGy0++ZlxrQ7PdUOUVMbn5BwkGb6+eRrnf43ipnFEA==}
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
@@ -4112,9 +4112,9 @@ snapshots:
       - bluebird
     optional: true
 
-  cacheable@1.8.8:
+  cacheable@1.8.9:
     dependencies:
-      hookified: 1.7.0
+      hookified: 1.8.1
       keyv: 5.3.2
 
   call-bind-apply-helpers@1.0.2:
@@ -4810,7 +4810,7 @@ snapshots:
 
   hexoid@2.0.0: {}
 
-  hookified@1.7.0: {}
+  hookified@1.8.1: {}
 
   html-escaper@2.0.2: {}
 
