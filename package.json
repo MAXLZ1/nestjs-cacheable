@@ -85,6 +85,9 @@
     "vitest": "^3.0.7"
   },
   "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
     "*.ts": [
       "eslint --fix",
       "prettier --write"
