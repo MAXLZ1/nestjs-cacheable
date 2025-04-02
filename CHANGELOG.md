@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.2.6](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.5...v0.2.6) (2025-04-02)
+
+
+### Bug Fixes
+
+* bump @commitlint/cli from 19.7.1 to 19.8.0 ([d1ed80d](https://github.com/MAXLZ1/nestjs-cacheable/commit/d1ed80ddfd70adccf45765ada9732e697582c897))
+* bump @commitlint/config-conventional from 19.7.1 to 19.8.0 ([2a9ad44](https://github.com/MAXLZ1/nestjs-cacheable/commit/2a9ad440d20ff38fc922d840a29a73447a69f7cf))
+* bump @eslint/js from 9.21.0 to 9.23.0 ([cbb1743](https://github.com/MAXLZ1/nestjs-cacheable/commit/cbb1743a680036c734b5186472dc3d08b3ce5feb))
+* bump @keyv/mysql from 2.1.0 to 2.1.1 ([bc7318e](https://github.com/MAXLZ1/nestjs-cacheable/commit/bc7318e95c0c4cf8e147754efd9657895248e75c))
+* bump @keyv/postgres from 2.1.0 to 2.1.2 ([d0047c4](https://github.com/MAXLZ1/nestjs-cacheable/commit/d0047c4e39485adc451da71519419578ee4ded43))
+* bump @keyv/redis from 4.2.0 to 4.3.2 ([129a167](https://github.com/MAXLZ1/nestjs-cacheable/commit/129a1674d629b89c99710f607286cff7273b6edf))
+* bump @keyv/valkey from 1.0.2 to 1.0.3 ([fc87bee](https://github.com/MAXLZ1/nestjs-cacheable/commit/fc87bee14b16f3d5ebba467f5bccca8369bc29cd))
+* bump @nestjs/common from 11.0.11 to 11.0.12 ([3bcaefa](https://github.com/MAXLZ1/nestjs-cacheable/commit/3bcaefa06092cd1a77c608a5920d7981654347e7))
+* bump @nestjs/core from 11.0.11 to 11.0.12 ([22cc498](https://github.com/MAXLZ1/nestjs-cacheable/commit/22cc498c1f415604013c64fe19ac0bf7f95f1657))
+* bump @nestjs/testing from 11.0.11 to 11.0.12 ([3587092](https://github.com/MAXLZ1/nestjs-cacheable/commit/358709279159d679ff95eda6edbabc86e83b0c2a))
+* bump @swc/core from 1.11.5 to 1.11.13 ([352261e](https://github.com/MAXLZ1/nestjs-cacheable/commit/352261ee7b2f8833a5485238c6633bfd3b29634d))
+* bump cacheable from 1.8.8 to 1.8.9 ([d9ccb06](https://github.com/MAXLZ1/nestjs-cacheable/commit/d9ccb067788cbdb44653c81bcd0577535f45c782))
+* bump eslint from 9.21.0 to 9.23.0 ([6ebae43](https://github.com/MAXLZ1/nestjs-cacheable/commit/6ebae43fe658c2ff8cad34d8cf035a7d6cb60976))
+* bump eslint-config-prettier from 10.0.1 to 10.1.1 ([93e9d91](https://github.com/MAXLZ1/nestjs-cacheable/commit/93e9d916d285c22bc91f59e949a98118d3eabee2))
+* bump keyv from 5.2.3 to 5.3.2 ([4252347](https://github.com/MAXLZ1/nestjs-cacheable/commit/42523478ef25238c4cf9e487fdbd223e80cb899d))
+* bump lint-staged from 15.4.3 to 15.5.0 ([63bfe4f](https://github.com/MAXLZ1/nestjs-cacheable/commit/63bfe4f11c280c47d6b5c8fecf1ec6ff18d2a876))
+* bump lru-cache from 11.0.2 to 11.1.0 ([344c3e9](https://github.com/MAXLZ1/nestjs-cacheable/commit/344c3e9c0f941a15a3312bfa16b4683b841e57c2))
+* bump supertest from 7.0.0 to 7.1.0 ([26a67fa](https://github.com/MAXLZ1/nestjs-cacheable/commit/26a67fa078be15ecec59eb16ca1468c33732d744))
+* bump typescript from 5.7.3 to 5.8.2 ([fba2ed9](https://github.com/MAXLZ1/nestjs-cacheable/commit/fba2ed92a69177566752143d4fa2e4efdf199634))
+* bump typescript-eslint from 8.25.0 to 8.28.0 ([a732f98](https://github.com/MAXLZ1/nestjs-cacheable/commit/a732f98f8ff20cf839ce4d35604ca59f2cca60cd))
+* bump vite from 6.2.0 to 6.2.3 in the npm_and_yarn group ([a8a05e0](https://github.com/MAXLZ1/nestjs-cacheable/commit/a8a05e0051ac6870284214df098dbe2caf6dd756))
+* upgrade vitest to 3.0.7 ([b1b1768](https://github.com/MAXLZ1/nestjs-cacheable/commit/b1b1768dadf8d4e88ffb7912f9bb65032b492985))
+
 ## [0.2.5](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.4...v0.2.5) (2025-03-03)
 
 
