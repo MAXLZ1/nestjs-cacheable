@@ -58,8 +58,8 @@ importers:
         specifier: ^11.0.11
         version: 11.0.11(@nestjs/common@11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@11.0.12)
       '@nestjs/testing':
-        specifier: ^11.0.11
-        version: 11.0.11(@nestjs/common@11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@11.0.12)(@nestjs/platform-express@11.0.11)
+        specifier: ^11.0.12
+        version: 11.0.12(@nestjs/common@11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@11.0.12)(@nestjs/platform-express@11.0.11)
       '@swc/core':
         specifier: ^1.11.16
         version: 1.11.16
@@ -546,8 +546,8 @@ packages:
       '@nestjs/common': ^11.0.0
       '@nestjs/core': ^11.0.0
 
-  '@nestjs/testing@11.0.11':
-    resolution: {integrity: sha512-SoMIrhRpElV53btmGnEwpIQmXn2Xcztb9ae3lv+eVVnPHQuyB2zlgDIQVNjicbj7+3jdycX52KctOoj2eXEo1Q==}
+  '@nestjs/testing@11.0.12':
+    resolution: {integrity: sha512-jl1McTqrY+zRBFIWcFMVwesY2v++mAdHrrzXsLxatgkf6wRVh6te1MQ6LikgQ6qz4P5qzVV6EiXQVLGvARe5Xw==}
     peerDependencies:
       '@nestjs/common': ^11.0.0
       '@nestjs/core': ^11.0.0
@@ -3507,7 +3507,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@nestjs/testing@11.0.11(@nestjs/common@11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@11.0.12)(@nestjs/platform-express@11.0.11)':
+  '@nestjs/testing@11.0.12(@nestjs/common@11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@11.0.12)(@nestjs/platform-express@11.0.11)':
     dependencies:
       '@nestjs/common': 11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1)
       '@nestjs/core': 11.0.12(@nestjs/common@11.0.12(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/platform-express@11.0.11)(reflect-metadata@0.2.2)(rxjs@7.8.1)
