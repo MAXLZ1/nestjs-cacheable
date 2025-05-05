@@ -42,7 +42,7 @@
   "packageManager": "pnpm@9.15.0",
   "dependencies": {
     "@keyv/memcache": "^2.0.1",
-    "keyv": "^5.3.2",
+    "keyv": "^5.3.3",
     "lru-cache": "^11.1.0"
   },
   "peerDependencies": {
@@ -65,8 +65,8 @@
     "@nestjs/core": "^11.0.12",
     "@nestjs/platform-express": "^11.0.11",
     "@nestjs/testing": "^11.0.12",
-    "@swc/core": "^1.11.16",
-    "@types/supertest": "^6.0.2",
+    "@swc/core": "^1.11.24",
+    "@types/supertest": "^6.0.3",
     "@vitest/coverage-v8": "^3.0.7",
     "cacheable": "^1.8.9",
     "dotenv-flow": "^4.1.0",
@@ -74,12 +74,12 @@
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
     "reflect-metadata": "^0.2.2",
     "rimraf": "^6.0.1",
     "supertest": "^7.1.0",
-    "typescript": "^5.8.2",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.29.0",
     "unplugin-swc": "^1.5.1",
     "vitest": "^3.0.7"
