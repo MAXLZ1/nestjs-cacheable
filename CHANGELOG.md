@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.7](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.6...v0.2.7) (2025-05-05)
+
+
+### Bug Fixes
+
+* bump @nestjs/common from 11.0.12 to 11.1.0 ([4f666ee](https://github.com/MAXLZ1/nestjs-cacheable/commit/4f666ee8e0b57a977d037e8857f50618f52f2ab6))
+* bump @nestjs/core from 11.0.12 to 11.1.0 ([73e783c](https://github.com/MAXLZ1/nestjs-cacheable/commit/73e783c30e497ec825596b2c6331dca6d88c56eb))
+* bump @swc/core from 1.11.16 to 1.11.24 ([c58bf4c](https://github.com/MAXLZ1/nestjs-cacheable/commit/c58bf4cce9c2be5729580639f43a7466c24c1969))
+* bump @types/supertest from 6.0.2 to 6.0.3 ([de519c0](https://github.com/MAXLZ1/nestjs-cacheable/commit/de519c07b09d7f59f0c8404af05b9adfd03c783a))
+* bump cacheable from 1.8.9 to 1.8.10 ([368e25a](https://github.com/MAXLZ1/nestjs-cacheable/commit/368e25a7fd1016396bf58f4a58691da0fd958d82))
+* bump eslint from 9.23.0 to 9.25.1 ([3e9967d](https://github.com/MAXLZ1/nestjs-cacheable/commit/3e9967d3b23d2c96f866f56dcd8f76e0dde3d1ef))
+* bump keyv from 5.3.2 to 5.3.3 ([f16f18a](https://github.com/MAXLZ1/nestjs-cacheable/commit/f16f18a494436382cb6d622230634da0e317d155))
+* bump lint-staged from 15.5.0 to 15.5.1 ([fc19e48](https://github.com/MAXLZ1/nestjs-cacheable/commit/fc19e48ccb5bf97ed6336f5fcdd68c4110fff26a))
+* bump the npm_and_yarn group with 2 updates ([28315d2](https://github.com/MAXLZ1/nestjs-cacheable/commit/28315d26a94440014a92324e78063060bb0a9a82))
+* bump the npm_and_yarn group with 2 updates ([127c6a8](https://github.com/MAXLZ1/nestjs-cacheable/commit/127c6a8c8b5eaffe1b45590c46ef2551ed0c3d0e))
+* bump typescript from 5.8.2 to 5.8.3 ([403e899](https://github.com/MAXLZ1/nestjs-cacheable/commit/403e8999b31a2231215e7c3b0963d8d04a2f3207))
+
 ## [0.2.6](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.5...v0.2.6) (2025-04-02)
 
 
