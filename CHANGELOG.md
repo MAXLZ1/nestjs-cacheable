@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.2.8](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.7...v0.2.8) (2025-06-02)
+
+
+### Bug Fixes
+
+* bump @commitlint/config-conventional from 19.8.0 to 19.8.1 ([7124f90](https://github.com/MAXLZ1/nestjs-cacheable/commit/7124f90fb3724f7d398339cc9fc803d6fc203d44))
+* bump @eslint/js from 9.23.0 to 9.28.0 ([7d1cc79](https://github.com/MAXLZ1/nestjs-cacheable/commit/7d1cc79395f9730aceaef9e88e49969bee1d764f))
+* bump @keyv/sqlite from 4.0.1 to 4.0.4 ([6eedd96](https://github.com/MAXLZ1/nestjs-cacheable/commit/6eedd969e7d47d5b6d6a9d43308fc61f03047b24))
+* bump @nestjs/core from 11.1.0 to 11.1.2 ([af1df94](https://github.com/MAXLZ1/nestjs-cacheable/commit/af1df9451a31abc5cfd86cbab7e0ae2082b36358))
+* bump @nestjs/testing from 11.0.12 to 11.1.2 ([615462e](https://github.com/MAXLZ1/nestjs-cacheable/commit/615462ecf548482ed1aaf909aa38a61ec1608ba4))
+* bump @swc/core from 1.11.24 to 1.11.29 ([3650880](https://github.com/MAXLZ1/nestjs-cacheable/commit/36508802577e99084776fe0169c43328e6953c20))
+* bump cacheable from 1.8.10 to 1.9.0 ([3fa398c](https://github.com/MAXLZ1/nestjs-cacheable/commit/3fa398c51709559da9bf6cc7ed2be2e688351e19))
+* bump eslint from 9.26.0 to 9.28.0 ([6e1feb1](https://github.com/MAXLZ1/nestjs-cacheable/commit/6e1feb147f49aaf6b0c612366a9afade9f616489))
+* bump supertest from 7.1.0 to 7.1.1 ([1911594](https://github.com/MAXLZ1/nestjs-cacheable/commit/19115945ab24e9c5e66291ddaa65d1a7557b0563))
+* bump unplugin-swc from 1.5.1 to 1.5.3 ([0c371f5](https://github.com/MAXLZ1/nestjs-cacheable/commit/0c371f509833203dd1b898df9627a5f61a94ef72))
+* bump vite in the npm_and_yarn group across 1 directory ([37947e2](https://github.com/MAXLZ1/nestjs-cacheable/commit/37947e2f17de62dea9f917f36cb7c97702bafcfc))
+
 ## [0.2.7](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.6...v0.2.7) (2025-05-05)
 
 
