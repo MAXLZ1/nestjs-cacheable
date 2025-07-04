@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.2.9](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.8...v0.2.9) (2025-07-04)
+
+
+### Bug Fixes
+
+* bump @eslint/js from 9.28.0 to 9.30.0 ([803fedf](https://github.com/MAXLZ1/nestjs-cacheable/commit/803fedf9cc4580bc367a57e19ec40724d8532154))
+* bump @keyv/postgres from 2.1.2 to 2.1.5 ([65ed623](https://github.com/MAXLZ1/nestjs-cacheable/commit/65ed6238a69bc5cb78283063dd0fa1e6f15f1835))
+* bump @keyv/redis from 4.3.2 to 4.4.0 ([fe6ef30](https://github.com/MAXLZ1/nestjs-cacheable/commit/fe6ef304db4808ab4e3123653b7af1bb400fe233))
+* bump @nestjs/common from 11.1.0 to 11.1.3 ([2f2478f](https://github.com/MAXLZ1/nestjs-cacheable/commit/2f2478ffb10de866d20f0a926cd3cfc2ef257162))
+* bump @nestjs/core from 11.1.2 to 11.1.3 ([13281f8](https://github.com/MAXLZ1/nestjs-cacheable/commit/13281f8d16279f40c783c8c09b9398462ee175da))
+* bump @nestjs/platform-express from 11.0.11 to 11.1.3 ([f11d37d](https://github.com/MAXLZ1/nestjs-cacheable/commit/f11d37d419ad4e8de984b47f33cbb649d4a1b0a6))
+* bump @nestjs/testing from 11.1.2 to 11.1.3 ([dcf469b](https://github.com/MAXLZ1/nestjs-cacheable/commit/dcf469b703987494259a7dda56ba8c1dc7184290))
+* bump eslint-config-prettier from 10.1.1 to 10.1.5 ([01e9f7c](https://github.com/MAXLZ1/nestjs-cacheable/commit/01e9f7c9c8af99967f453b77a83ce658708aabe9))
+* bump prettier from 3.5.3 to 3.6.2 ([bae507f](https://github.com/MAXLZ1/nestjs-cacheable/commit/bae507f9e9d34b1856993e40c7df3d661b3c267d))
+
 ## [0.2.8](https://github.com/MAXLZ1/nestjs-cacheable/compare/v0.2.7...v0.2.8) (2025-06-02)
 
 
