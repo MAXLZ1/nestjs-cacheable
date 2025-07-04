@@ -37,8 +37,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       '@keyv/postgres':
-        specifier: ^2.1.2
-        version: 2.1.2
+        specifier: ^2.1.5
+        version: 2.1.5(keyv@5.3.3)
       '@keyv/redis':
         specifier: ^4.4.0
         version: 4.4.0(keyv@5.3.3)
@@ -488,9 +488,11 @@ packages:
     resolution: {integrity: sha512-KphGRe574qKRiOjwhzXUXkw6RLL8Y3IbHTUR9+T7xdVYjBVQBzZcGnuyqCo5vMAIusH+LtspM/kIjRP5tOZg0g==}
     engines: {node: '>= 18'}
 
-  '@keyv/postgres@2.1.2':
-    resolution: {integrity: sha512-HNqBFQFajK3fp+b4dfSIN9i5Bu85OChmVaRaqI50uutsX70CBcCPd0VS4x9qBFoWP+snzwdJGSqlio7Y5mUnZA==}
+  '@keyv/postgres@2.1.5':
+    resolution: {integrity: sha512-1oJZNzO/QYAFyr8A0cb9VkhqP1bYRSDGvcgH0ImEPV1RWk+BFVrpD+QuaBnpm6t8asHqaDwQ0rhUnXg7iJjE8Q==}
     engines: {node: '>= 18'}
+    peerDependencies:
+      keyv: ^5.3.3
 
   '@keyv/redis@4.4.0':
     resolution: {integrity: sha512-n/KEj3S7crVkoykggqsMUtcjNGvjagGPlJYgO/r6m9hhGZfhp1txJElHxcdJ1ANi/LJoBuOSILj15g6HD2ucqQ==}
@@ -2368,30 +2370,30 @@ packages:
     resolution: {integrity: sha512-vE7JKRyES09KiunauX7nd2Q9/L7lhok4smP9RZTDeD4MVs72Dp2qNFVz39Nz5a0FVEW0BJR6C0DYrq6unoziZA==}
     engines: {node: '>= 14.16'}
 
-  pg-cloudflare@1.1.1:
-    resolution: {integrity: sha512-xWPagP/4B6BgFO+EKz3JONXv3YDgvkbVrGw2mTo3D6tVDQRh1e7cqVGvyR3BE+eQgAvx1XhW/iEASj4/jCWl3Q==}
+  pg-cloudflare@1.2.7:
+    resolution: {integrity: sha512-YgCtzMH0ptvZJslLM1ffsY4EuGaU0cx4XSdXLRFae8bPP4dS5xL1tNB3k2o/N64cHJpwU7dxKli/nZ2lUa5fLg==}
 
-  pg-connection-string@2.7.0:
-    resolution: {integrity: sha512-PI2W9mv53rXJQEOb8xNR8lH7Hr+EKa6oJa38zsK0S/ky2er16ios1wLKhZyxzD7jUReiWokc9WK5nxSnC7W1TA==}
+  pg-connection-string@2.9.1:
+    resolution: {integrity: sha512-nkc6NpDcvPVpZXxrreI/FOtX3XemeLl8E0qFr6F2Lrm/I8WOnaWNhIPK2Z7OHpw7gh5XJThi6j6ppgNoaT1w4w==}
 
   pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-pool@3.8.0:
-    resolution: {integrity: sha512-VBw3jiVm6ZOdLBTIcXLNdSotb6Iy3uOCwDGFAksZCXmi10nyRvnP2v3jl4d+IsLYRyXf6o9hIm/ZtUzlByNUdw==}
+  pg-pool@3.10.1:
+    resolution: {integrity: sha512-Tu8jMlcX+9d8+QVzKIvM/uJtp07PKr82IUOYEphaWcoBhIYkoHpLXN3qO59nAI11ripznDsEzEv8nUxBVWajGg==}
     peerDependencies:
       pg: '>=8.0'
 
-  pg-protocol@1.8.0:
-    resolution: {integrity: sha512-jvuYlEkL03NRvOoyoRktBK7+qU5kOvlAwvmrH8sr3wbLrOdVWsRxQfz8mMy9sZFsqJ1hEWNfdWKI4SAmoL+j7g==}
+  pg-protocol@1.10.3:
+    resolution: {integrity: sha512-6DIBgBQaTKDJyxnXaLiLR8wBpQQcGWuAESkRBX/t6OwA8YsqP+iVSiond2EDy6Y/dsGk8rh/jtax3js5NeV7JQ==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
     engines: {node: '>=4'}
 
-  pg@8.14.0:
-    resolution: {integrity: sha512-nXbVpyoaXVmdqlKEzToFf37qzyeeh7mbiXsnoWvstSqohj88yaa/I/Rq/HEVn2QPSZEuLIJa/jSpRDyzjEx4FQ==}
+  pg@8.16.0:
+    resolution: {integrity: sha512-7SKfdvP8CTNXjMUzfcVTaI+TDzBEeaUnVwiVGZQD1Hh33Kpev7liQba9uLd4CfN8r9mCVsD0JIpq03+Unpz+kg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -3415,10 +3417,10 @@ snapshots:
     dependencies:
       mysql2: 3.14.0
 
-  '@keyv/postgres@2.1.2':
+  '@keyv/postgres@2.1.5(keyv@5.3.3)':
     dependencies:
       keyv: 5.3.3
-      pg: 8.14.0
+      pg: 8.16.0
     transitivePeerDependencies:
       - pg-native
 
@@ -5340,18 +5342,18 @@ snapshots:
 
   pathval@2.0.0: {}
 
-  pg-cloudflare@1.1.1:
+  pg-cloudflare@1.2.7:
     optional: true
 
-  pg-connection-string@2.7.0: {}
+  pg-connection-string@2.9.1: {}
 
   pg-int8@1.0.1: {}
 
-  pg-pool@3.8.0(pg@8.14.0):
+  pg-pool@3.10.1(pg@8.16.0):
     dependencies:
-      pg: 8.14.0
+      pg: 8.16.0
 
-  pg-protocol@1.8.0: {}
+  pg-protocol@1.10.3: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -5361,15 +5363,15 @@ snapshots:
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
 
-  pg@8.14.0:
+  pg@8.16.0:
     dependencies:
-      pg-connection-string: 2.7.0
-      pg-pool: 3.8.0(pg@8.14.0)
-      pg-protocol: 1.8.0
+      pg-connection-string: 2.9.1
+      pg-pool: 3.10.1(pg@8.16.0)
+      pg-protocol: 1.10.3
       pg-types: 2.2.0
       pgpass: 1.0.5
     optionalDependencies:
-      pg-cloudflare: 1.1.1
+      pg-cloudflare: 1.2.7
 
   pgpass@1.0.5:
     dependencies:
